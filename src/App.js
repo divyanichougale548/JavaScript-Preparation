@@ -65,7 +65,7 @@ const App = () => {
         <HigherOrder/>
         <CallApplyBind/> */}
         {/* <Polyfills/> */}
-        {/* <ApplyPolyfil/> */}
+        <ApplyPolyfil />
         {/* <Promises /> */}
         {/* <AsyncAwait/> */}
         {/* <PromiseChanining/> */}
@@ -75,7 +75,7 @@ const App = () => {
         {/* <CbVCbR /> */}
         {/* <Hoisting /> */}
         {/* <Clousures /> */}
-        <Curring />
+        {/* <Curring /> */}
       </div>
     </Router>
   );

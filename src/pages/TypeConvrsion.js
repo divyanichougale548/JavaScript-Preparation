@@ -9,7 +9,7 @@ const TypeConvrsion = () => {
 
     console.log("5" * 2);  // 10   (string * number → number multiplication)
     console.log("5" / 2);  // 2.5  (string / number → number division)
-    console.log("abc" - 1);
+    console.log("abc" - 1); // NAN
 
     console.log(true + 1); // 2    (true → 1)
     console.log(false + 1); // 1   (false → 0)
