@@ -1,16 +1,16 @@
 
 const Hoisting = () => {
-    // function outer() {
-    //     console.log(inner); // ✅ function: inner (hoisted declaration)
+    function outer() {
+        console.log(inner); // ✅ function: inner (hoisted declaration)
 
-    //     function inner() {
-    //         return "I'm inner!";
-    //     }
+        function inner() {
+            return "I'm inner!";
+        }
 
-    //     var inner = "I'm a string now!";
-    //     console.log(inner); // ✅ "I'm a string now!"
-    // }
-    // outer();
+        var inner = "I'm a string now!";
+        console.log(inner); // ✅ "I'm a string now!"
+    }
+    outer();
 
 
 
@@ -25,17 +25,17 @@ const Hoisting = () => {
     // test(); // ❌ ReferenceError: Cannot access 'y' before initialization
 
 
-    function example() {
-        var x = 1;
+    // function example() {
+    //     var x = 1;
 
-        if (true) {
-            var x = 2; // Same variable, due to function scope
-            console.log(x); // ✅ 2
-        }
+    //     if (true) {
+    //         var x = 2; // Same variable, due to function scope
+    //         console.log(x); // ✅ 2
+    //     }
 
-        console.log(x); // ✅ 2 (not 1)
-    }
-    example()
+    //     console.log(x); // ✅ 2 (not 1)
+    // }
+    // example()
 
 }
 

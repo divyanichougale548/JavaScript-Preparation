@@ -29,34 +29,40 @@
 // export default App;
 // Filename - App.js
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import Test from './pages/Test';
-import HigherOrder from './pages/HigherOrder';
-import CallApplyBind from './pages/CallApplyBind';
-import Polyfills from './pages/Polyfills';
-import ApplyPolyfil from './pages/ApplyPolyfil';
-import Promises from './pages/Promises';
-import AsyncAwait from './pages/AsyncAwait';
-import PromiseChanining from './pages/PromiseChanining';
-import TypeConvrsion from './pages/TypeConvrsion';
-import Debouncing from './pages/Debouncing';
-import Throttling from './pages/Throttling';
-import CbVCbR from './pages/CbVCbR';
-import Hoisting from './pages/Hoisting';
-import Clousures from './pages/Closures';
-import Curring from './pages/Curring';
-
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import Test from "./pages/Test";
+import HigherOrder from "./pages/HigherOrder";
+import CallApplyBind from "./pages/CallApplyBind";
+import Polyfills from "./pages/Polyfills";
+import ApplyPolyfil from "./pages/ApplyPolyfil";
+import Promises from "./pages/Promises";
+import AsyncAwait from "./pages/AsyncAwait";
+import PromiseChanining from "./pages/PromiseChanining";
+import TypeConvrsion from "./pages/TypeConvrsion";
+import Debouncing from "./pages/Debouncing";
+import Throttling from "./pages/Throttling";
+import CbVCbR from "./pages/CbVCbR";
+import Hoisting from "./pages/Hoisting";
+import Clousures from "./pages/Closures";
+import Curring from "./pages/Curring";
+import This from "./pages/This";
+import Todolist from "./Todolist";
+import ThemeSwitcher from "./pages/Context/ThemeSwitcher";
+import { ThemeContext } from "./pages/Context/Themecontext.js";
 
 const App = () => {
+  const [theme, setTheme] = useState("light");
   return (
     <Router>
       <div>
-        <h1>
-          Namaste Javascript
-        </h1>
+        <h1>Namaste Javascript</h1>
+        {/* <ThemeContext.Provider value={{ theme, setTheme }}>
+          <ThemeSwitcher />
+        </ThemeContext.Provider> */}
+
         {/* <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about"  element={<AboutPage />} />
@@ -65,21 +71,22 @@ const App = () => {
         <HigherOrder/>
         <CallApplyBind/> */}
         {/* <Polyfills/> */}
-        <ApplyPolyfil />
+        {/* <ApplyPolyfil /> */}
         {/* <Promises /> */}
-        {/* <AsyncAwait/> */}
+        {/* <AsyncAwait /> */}
         {/* <PromiseChanining/> */}
         {/* <TypeConvrsion /> */}
-        {/* <Debouncing/> */}
+        {/* <Debouncing /> */}
         {/* <Throttling /> */}
         {/* <CbVCbR /> */}
         {/* <Hoisting /> */}
         {/* <Clousures /> */}
         {/* <Curring /> */}
+        {/* <This/> */}
+        <Todolist />
       </div>
     </Router>
   );
 };
 
 export default App;
-
